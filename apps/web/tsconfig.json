@@ -1,5 +1,4 @@
 {
-  "extends": "@keeper/tsconfig/nextjs.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "extends": "@keeper/tsconfig/react-library.json",
   "exclude": ["node_modules"]
 }
