@@ -10,6 +10,7 @@
     "clean": "rimraf node_modules .next .turbo"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.16",
     "@keeper/firebase": "*",
     "next": "^13.1.1",
     "react": "^18.2.0",

@@ -1,7 +1,13 @@
+import { Header } from "../components/Header";
+import { Drawer } from "../components/Drawer";
+import { Body } from "../components/Body";
+
 export default function Web() {
   return (
     <div>
-      <h1>Web</h1>
+      <Header />
+      <Drawer />
+      <Body />
     </div>
   );
 }
