@@ -150,4 +150,4 @@ export const Drawer = ({ open }: Props) => {
       </ul>
     </aside>
   );
-};
+});
