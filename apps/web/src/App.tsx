@@ -11,12 +11,28 @@ export const App = () => {
 
   const onToggleDrawer = () => {
     setOpen((prev) => !prev);
+    toggleRef.current = !toggleRef.current;
   };
+
+  useEffect(() => {
+    const onMouseEnter = () => {
+      if (!toggleRef.current) {
+        setOpen(true);
+      }
+    };
+    const onMouseLeave = () => {
+      if (!toggleRef.current) {
+        setOpen(false);
+      }
+    };
+    drawerRef.current?.addEventListener("mouseenter", onMouseEnter);
+    drawerRef.current?.addEventListener("mouseleave", onMouseLeave);
+  }, []);
 
   return (
     <div>
       <Header onToggleDrawer={onToggleDrawer} />
-      <Drawer open={open} />
+      <Drawer ref={drawerRef} open={open} />
       <Body drawerOpen={open} />
     </div>
   );
