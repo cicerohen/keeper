@@ -9,7 +9,7 @@ export const Body = ({ drawerOpen }: Props) => {
     <main
       className={classNames(
         "pt-16 transition-all",
-        drawerOpen && "ml-72",
+        drawerOpen && "ml-80",
         !drawerOpen && "ml-16"
       )}
     >
