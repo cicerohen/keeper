@@ -1,3 +1,5 @@
+import { NoteCard } from "./NoteCard";
+
 import { classNames } from "../utils/classNames";
 
 type Props = {
@@ -13,7 +15,16 @@ export const Body = ({ drawerOpen }: Props) => {
         !drawerOpen && "ml-16"
       )}
     >
-      <div className="h-[900px]">Content</div>
+      <div className="h-[900px] pt-8">
+        <div className="flex items-center justify-center">
+          <NoteCard />
+        </div>
+        <div className="grid grid-cols-4">
+          <NoteCard />
+          <NoteCard />
+          <NoteCard />
+        </div>
+      </div>
     </main>
   );
 };
